@@ -6,7 +6,13 @@
 		public $options = array();
 		public $css = "";
 
-		public function wp_easy_options($custom){
+		public function wp_easy_options($optionsArray, $cssURL){
+			
+			//set options array
+			$this->options = $optionsArray;
+			
+			//set CSS url
+			$this->css = file_get_contents($cssURL);
 			
 			//run CSS build in head
 			add_action( 'wp_head', array($this, 'getCSS'));
@@ -62,38 +68,16 @@
 			}
 		}
 		
-		public function buildCSS(){
+		public function getCSS(){
 			
-			//run through css and options
+			//build the css
 			foreach ($this->options as $key => $value) {
 				
 				$this->css = str_replace($this->options[$key][1], get_theme_mod($this->options[$key][1], $this->options[$key][2]), $this->css);
 			}
-		}
-		
-		public function getCSS(){
-			
-			//build the css
-			$this->buildCSS();
 			
 			//echo the CSS
-			echo '<style>';
-			
-			echo($this->css);
-			
-			echo '</style>';
-		}
-		
-		public function setOptions($optionsArray){
-			
-			//set the options
-			$this->options = $optionsArray;
-		}
-		
-		public function loadCSS($cssURL){
-			
-			//set the options
-			$this->css = file_get_contents($cssURL);
+			echo('<style>' . $this->css . '</style>');
 		}
 	}
 
