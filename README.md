@@ -1,5 +1,5 @@
 # WPEO
-WordPress Easy Options
+WordPress Easy Options - easilly create WordPress theme options and automatically parse and add to CSS.
 
 Basically, do this: 
 ```
