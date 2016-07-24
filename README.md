@@ -1,5 +1,6 @@
 # WPEO
-WordPress Easy Options - easilly create WordPress theme options and automatically parse and add to CSS.
+
+WordPress Easy Options. Use this class to create options for the wordpress customizer and automaticaly add values to your theme CSS file. Simply use the option ID as your value and hey presto, working options! 
 
 Theme functions.php File:
 ```
