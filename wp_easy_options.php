@@ -1,5 +1,14 @@
 <?php
 
+	/*
+		WORDPRESS EASY OPTIONS
+		COPYRIGHT (C) 2016 - DANIEL MACE
+		CUMBRIA WEB SOLUTIONS LTD.
+		WWW.CUMBRIAWEBSOLUTIONS.CO.UK
+		GITHUB.COM/DMACELANCS/WPEO
+		T: @DMACE_
+	*/
+
 	class wp_easy_options {
 		
 		//Vars to store options, css
