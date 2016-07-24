@@ -2,7 +2,7 @@
 WordPress Easy Options
 
 Basically, do this: 
-
+```
 //INCLUDE AND INIT
 include 'WPEO/wp_easy_options.php';
 $options = new wp_easy_options();
@@ -40,3 +40,4 @@ $options->setOptions(
 
 //LOAD CSS
 $options->loadCSS(get_bloginfo('stylesheet_url'));
+```
