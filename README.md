@@ -31,3 +31,5 @@ a{
 	font-weight: link_font_weight;
 }
 ```
+
+*Note:* Don't include your stylesheet when using WPEO, there's a hook in the class that does it automatically!
